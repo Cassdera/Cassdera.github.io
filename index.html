@@ -1,5 +1,74 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <a>This is my frist website.</a>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 200px 400px;
+			}
+			
+			.room{
+				width: 640px;
+				height: 320px;
+				position: relative;
+				background-color: #ffd2d2;
+			}
+	
+			.room>div{
+				width: 320px;
+				height: 320px;
+				border: 3px black solid;
+				background-color: darkred;
+				box-sizing: border-box;
+				float: left;
+				transition: all 2s;
+			}
+			
+			.room>div>div{
+				width: 30px;
+				height: 30px;
+				background-color: #000000;
+				border-radius: 15px;
+				position: absolute;
+				top: 150px;
+			}
+			
+			.room-left{
+				transform-origin: left;
+			}
+			
+			.room-right{
+				transform-origin: right;
+			}
+			
+			.knock-left{
+				position: absolute;
+				left: 230px;
+			}
+			
+			.knock-right{
+				position: absolute;
+				right: 230px;
+			}
+			
+			.room:hover .room-left{
+				transform: rotateY(130deg)
+			}
+			.room:hover .room-right{
+				transform: rotateY(130deg)
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="room">
+			<div class="room-left">
+				<div class="knock-left"></div>
+			</div>
+			<div class="room-right">
+				<div class="knock-right"></div>
+			</div>
+		</div>
+	</body>
 </html>
