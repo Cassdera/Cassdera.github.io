@@ -36,10 +36,12 @@
 			
 			.room-left{
 				transform-origin: left;
+				position:relative;
 			}
 			
 			.room-right{
 				transform-origin: right;
+				position:relative;
 			}
 			
 			.knock-left{
@@ -58,11 +60,21 @@
 			.room:hover .room-right{
 				transform: rotateY(130deg)
 			}
-			
+			.niu{
+				height:80px;
+				position:absolute;
+				top:40%;
+				left:43%;
+				transition: all 2s;
+			}
+			.room:hover .niu{
+				transform: rotateZ(3600deg)
+			}
 		</style>
 	</head>
 	<body>
 		<div class="room">
+			<img class="niu" src="img/niu.png"></img>
 			<div class="room-left">
 				<div class="knock-left"></div>
 			</div>
@@ -70,5 +82,6 @@
 				<div class="knock-right"></div>
 			</div>
 		</div>
+		
 	</body>
 </html>
